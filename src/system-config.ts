@@ -50,6 +50,8 @@ System.config({
     '@angular': 'vendor/@angular',
     'rxjs': 'vendor/rxjs',
     'main': 'main.js'
+    //,
+    //'ng2-charts': 'node_modules/ng2-charts'
   },
   packages: cliSystemConfigPackages
 });

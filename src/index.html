@@ -13,9 +13,6 @@
 </head>
 <body>
   <app-root>Loading...</app-root>
-
-  
-
     {{#each scripts.polyfills}}
     <script src="{{.}}"></script>
     {{/each}}
@@ -23,9 +20,6 @@
       System.import('system-config.js').then(function () {
         System.import('main');
       }).catch(console.error.bind(console));
-    </script>
-
-  
-
+    </script><script src="node_modules/chart.js/dist/Chart.bundle.min.js"></script>  
 </body>
 </html>

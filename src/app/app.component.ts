@@ -12,5 +12,15 @@ import { CoursesComponent } from './courses.component'
   //directives: [LineChartDemoComponent]
 })
 export class AppComponent {
-  title = 'app works! omgz!!!!!!!!!';
+  title = 'omgz goatz!!!!';
+  imageUrl = "http://www.naturallivingideas.com/wp-content/uploads/2015/08/baby-goat.jpg"
+
+  onClick($event: MouseEvent) {
+    $event.stopPropagation();
+    console.log("clicked me!", $event);
+  }
+
+  onDivClick() {
+    console.log("Handled by div!");
+  }
 }

@@ -24,6 +24,7 @@ export class CoursesComponent {
         this.courses = courseService.getCourses();
     }
 
+    
 
     isFavourite = false;
     onClick() {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, Input } from '@angular/core'
 import { CoursesComponent } from './courses.component'
 import { LineChartDemoComponent } from './chart.component'
 import { FavouriteComponent } from './favourite.component'
@@ -16,6 +16,8 @@ import { FavouriteComponent } from './favourite.component'
 export class AppComponent {
   title = 'omgz goatz!!!!';
   imageUrl = "http://www.naturallivingideas.com/wp-content/uploads/2015/08/baby-goat.jpg"
+  post;
+  isFavourite: boolean
 
   onClick($event: MouseEvent) {
     $event.stopPropagation();
@@ -26,18 +28,26 @@ export class AppComponent {
     console.log("Handled by div!");
   }
 
+  constructor() {
+    this.post = {
+      isFavourite: true
+    };
 
-  post = {
-    isFavourite: true
+    this.isFavourite = true;
   }
 
-  isFavourite = true;
+
+  
   
 
   onFavouriteChange($event) {
-    console.log($event);
+    console.log('app event: ' + $event);
+    console.log('app this.isFavourite: ' + this.isFavourite);
+    console.log('app post.isFavourite: ' + this.post.isFavourite )
     //this.isFavourite = !this.isFavourite;    
 
   }
+
+  @Input() appIsFavourite = this.isFavourite;
   
 }

@@ -7,10 +7,14 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
+  'chartjs': 'vendor/chart.js/dist/Chart.min.js',
+  'ng2-charts': 'vendor/ng2-charts'
 };
 
 /** User packages configuration. */
 const packages: any = {
+  'chartjs': { defaultExtension: 'js', format: 'cjs' },
+  'ng2-charts': { defaultExtension: 'js', main: 'ng2-charts.js' }
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -50,8 +54,6 @@ System.config({
     '@angular': 'vendor/@angular',
     'rxjs': 'vendor/rxjs',
     'main': 'main.js'
-    //,
-    //'ng2-charts': 'node_modules/ng2-charts'
   },
   packages: cliSystemConfigPackages
 });

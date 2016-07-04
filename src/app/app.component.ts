@@ -1,6 +1,6 @@
 import { Component } from '@angular/core'
 import { CoursesComponent } from './courses.component'
-//import { LineChartDemoComponent } from './chart.component'
+import { LineChartDemoComponent } from './chart.component'
 
 
 @Component({
@@ -8,7 +8,7 @@ import { CoursesComponent } from './courses.component'
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.css'],
-  directives: [CoursesComponent]
+  directives: [CoursesComponent, LineChartDemoComponent]
   //directives: [LineChartDemoComponent]
 })
 export class AppComponent {

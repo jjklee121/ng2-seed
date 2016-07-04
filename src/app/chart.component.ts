@@ -1,15 +1,18 @@
 import {Component} from '@angular/core';
 import {CORE_DIRECTIVES, FORM_DIRECTIVES, NgClass} from '@angular/common';
 
-//import {CHART_DIRECTIVES} from 'ng2-charts';
-import {CHART_DIRECTIVES} from 'ng2-charts/ng2-charts'
+import {CHART_DIRECTIVES} from 'ng2-charts';
+import 'chartjs';
+
+//import {CHART_DIRECTIVES} from 'ng2-charts/ng2-charts'
 // webpack html imports
 let template = 'chart.component.html';
 
 @Component({
     moduleId: module.id,
   selector: 'line-chart-demo',
-  templateUrl: template,
+  //templateUrl: template,
+  templateUrl: 'chart.component.html',
   directives: [CHART_DIRECTIVES, NgClass, CORE_DIRECTIVES, FORM_DIRECTIVES]
 })
 export class LineChartDemoComponent {

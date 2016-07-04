@@ -23,4 +23,11 @@ export class CoursesComponent {
     constructor(courseService: CourseService) {
         this.courses = courseService.getCourses();
     }
+
+
+    isFavourite = false;
+    onClick() {
+        console.log("clicked star");
+        this.isFavourite = !this.isFavourite;
+    }
 }

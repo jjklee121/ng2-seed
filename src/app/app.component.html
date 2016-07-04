@@ -3,9 +3,15 @@
 </h1>
 <h1 [textContent]="title">
 </h1>
+<favourite [is-favourite]="post.isFavourite" (change)="onFavouriteChange($event)"></favourite>
 
+<br />
+<favourite [is-favourite]="isFavourite" (change)="onFavouriteChange($event)"></favourite>
+
+{{isFavourite}}
 <div>
 <!--<input type="text" [value]="title" (input)="title = $event.target.value" />-->
+
 <input type="text" [(ngModel)]="title" />
 
 <input type="button" (click)="title = ''" value="Clear" />

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core'
 import { CoursesComponent } from './courses.component'
 import { LineChartDemoComponent } from './chart.component'
+import { FavouriteComponent } from './favourite.component'
 
 
 @Component({
@@ -8,8 +9,9 @@ import { LineChartDemoComponent } from './chart.component'
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.css'],
-  directives: [CoursesComponent, LineChartDemoComponent]
+  directives: [CoursesComponent, LineChartDemoComponent, FavouriteComponent]
   //directives: [LineChartDemoComponent]
+
 })
 export class AppComponent {
   title = 'omgz goatz!!!!';
@@ -23,4 +25,19 @@ export class AppComponent {
   onDivClick() {
     console.log("Handled by div!");
   }
+
+
+  post = {
+    isFavourite: true
+  }
+
+  isFavourite = true;
+  
+
+  onFavouriteChange($event) {
+    console.log($event);
+    //this.isFavourite = !this.isFavourite;    
+
+  }
+  
 }
